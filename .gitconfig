@@ -1,0 +1,26 @@
+[user]
+	name = Phaneendra Chiruvella
+[core]
+	editor = emacsclient -t
+[color]
+	ui=true
+[url "git@github.com"]
+     insteadOf = gh
+[url "git@bitbucket.org"]
+     insteadOf = bb
+[help]
+	autocorrect = 1
+[alias]
+	d = diff
+	a = add
+	c = commit
+	m = merge
+	l = log
+	sl = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	co = checkout
+	p = push
+	pl = pull
+	r = reset
+	cl = clone
+	b = branch
+	st = stash
