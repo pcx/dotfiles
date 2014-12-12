@@ -4,3 +4,4 @@
 *.elc
 .emacs.d/session*
 .emacs.d/tramp
+.emacs.d/elpa

@@ -1,5 +1,5 @@
 #!/bin/bash
-rsync ~/.bash_aliases .
-rsync ~/.gitconfig .
-rsync ~/.tmux.conf .
-rsync -r ~/.emacs.d/ .emacs.d
+rsync -avz ~/.bash_aliases .
+rsync -avz  ~/.gitconfig .
+rsync -avz ~/.tmux.conf .
+rsync -avz --exclude 'elpa' --exclude 'session*' --exclude 'auto-save-list' --exclude '*~' ~/.emacs.d/ .emacs.d
