@@ -2,3 +2,4 @@
 rsync ~/.bash_aliases .
 rsync ~/.gitconfig .
 rsync ~/.tmux.conf .
+rsync -r ~/.emacs.d/ .emacs.d
