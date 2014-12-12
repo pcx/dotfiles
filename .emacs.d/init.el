@@ -18,13 +18,13 @@
 
 ;; Set hostname
 (setq hostname (replace-regexp-in-string
-		"\\(^[[:space:]\n]*\\|[[:space:]\n]*$\\)" ""
-		(with-output-to-string
-		  (call-process "hostname" nil standard-output))))
+                "\\(^[[:space:]\n]*\\|[[:space:]\n]*$\\)" ""
+                (with-output-to-string
+                  (call-process "hostname" nil standard-output))))
 
 ;; Setup load path
 (setq dotfiles-dir (file-name-directory
-		    (or (buffer-file-name) load-file-name)))
+                    (or (buffer-file-name) load-file-name)))
 (add-to-list 'load-path (concat dotfiles-dir "pcx"))
 
 ;; Check network connectivity, from ESK
@@ -32,17 +32,17 @@
 (require 'cl)
 (defun esk-online? ()
   (if (and (functionp 'network-interface-list)
-	   (network-interface-list))
+           (network-interface-list))
       (some (lambda (iface) (unless (equal "lo" (car iface))
-			      (member 'up (first (last (network-interface-info
-							(car iface)))))))
-	    (network-interface-list))
+                              (member 'up (first (last (network-interface-info
+                                                        (car iface)))))))
+            (network-interface-list))
     t))
 
 (require 'package)
 (dolist (source  '(("melpa" . "http://melpa.org/packages/")
-                  ("marmalade" . "http://marmalade-repo.org/packages/")
-		  ("gnu" . "http://elpa.gnu.org/packages/")))
+                   ("marmalade" . "http://marmalade-repo.org/packages/")
+                   ("gnu" . "http://elpa.gnu.org/packages/")))
   (add-to-list 'package-archives source t))
 (package-initialize)
 
@@ -59,8 +59,14 @@
 (defmacro Xlaunch (&rest x)
   (list 'if (eq window-system 'x) (cons 'progn x)))
 
-(Xlaunch (require 'bodil-x11))
+(Xlaunch (require 'pcx-x11))
 
 (setq pcx-pkg-full
       '(pcx-codestyle
-	))
+        pcx-complete
+        pcx-defuns))
+;; Now load other things
+(dolist (file pcx-pkg-full)
+  (require file))
+;; Load custom settings
+(load custom-file 'noerror)
