@@ -5,12 +5,13 @@ alias ll='ls -lah --group-directories-first'
 alias t='tree -aI .git'
 
 
-alias py='python'
+alias py='python3'
 alias ipy='ipython'
 alias pys='python -m SimpleHTTPServer'
 
 alias g='git'
 alias s='git status'
+alias b='git branch'
 alias d='git diff'
 alias a='git add'
 alias m='git merge'
