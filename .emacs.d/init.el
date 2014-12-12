@@ -68,5 +68,3 @@
 ;; Now load other things
 (dolist (file pcx-pkg-full)
   (require file))
-;; Load custom settings
-(load custom-file 'noerror)

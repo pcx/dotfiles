@@ -2,4 +2,4 @@
 rsync -avz ~/.bash_aliases .
 rsync -avz  ~/.gitconfig .
 rsync -avz ~/.tmux.conf .
-rsync -avz --exclude 'elpa' --exclude 'session*' --exclude 'auto-save-list' --exclude '*~' --exclude '*.elc' ~/.emacs.d/ .emacs.d
+rsync -avz --exclude 'elpa' --exclude 'session*' --exclude 'auto-save-list' --exclude 'bak' --exclude '*~' --exclude '*.elc' ~/.emacs.d/ .emacs.d
