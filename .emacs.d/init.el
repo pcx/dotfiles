@@ -64,7 +64,11 @@
 (setq pcx-pkg-full
       '(pcx-codestyle
         pcx-complete
-        pcx-defuns))
+        pcx-defuns
+        pcx-dired
+        pcx-editing
+        pcx-eshell
+        pcx-flycheck))
 ;; Now load other things
 (dolist (file pcx-pkg-full)
   (require file))
