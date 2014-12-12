@@ -39,5 +39,3 @@
      (put-clojure-indent form 'defun)))
 
 (provide 'pcx-codestyle)
-
-

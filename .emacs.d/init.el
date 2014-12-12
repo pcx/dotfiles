@@ -68,7 +68,14 @@
         pcx-dired
         pcx-editing
         pcx-eshell
-        pcx-flycheck))
+        pcx-flycheck
+        pcx-haskell
+        pcx-helm
+        pcx-ido
+        pcx-js
+        pcx-lisps
+        pcx-magit
+        pcx-theme))
 ;; Now load other things
 (dolist (file pcx-pkg-full)
   (require file))
