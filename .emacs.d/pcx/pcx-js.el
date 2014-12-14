@@ -9,10 +9,10 @@
 (add-to-list 'auto-mode-alist '("\\.es6\\'" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.ejs\\'" . js2-mode))
 
-(font-lock-add-keywords
- 'js2-mode `(("\\<\\(function\\) *("
-              (0 (progn (compose-region (match-beginning 1)
-                                        (match-end 1) "\u0192") nil)))))
+;; (font-lock-add-keywords
+;;  'js2-mode `(("\\<\\(function\\) *("
+;;               (0 (progn (compose-region (match-beginning 1)
+;;                                         (match-end 1) "\u0192") nil)))))
 
 (setq-default js2-mode-indent-ignore-first-tab t)
 (setq-default js2-show-parse-errors nil)

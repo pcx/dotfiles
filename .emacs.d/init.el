@@ -75,6 +75,7 @@
         pcx-js
         pcx-lisps
         pcx-magit
+        pcx-python
         pcx-theme))
 ;; Now load other things
 (dolist (file pcx-pkg-full)
