@@ -2,8 +2,17 @@
 
 (setq delete-selection-mode t)
 
+(setq show-paren-mode t)
+
 ;; Undo to C-z
 (global-set-key (kbd "C-z") 'undo)
+
+;; Changing C-w functionality to that of 'bash'
+(global-set-key "\C-w" 'backward-kill-word)
+(global-set-key "\C-c\C-k" 'kill-region)
+
+;; re-map kill-whole-line
+(global-set-key (kbd "M-k") 'kill-whole-line)
 
 ;; Multiple cursors!
 (package-require 'multiple-cursors)
@@ -15,6 +24,35 @@
 ;; expand-region <3 @magnars
 (package-require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
+
+;; better alternative to move-beginning-of-line
+;; credit @bbtasov
+(defun smarter-move-beginning-of-line (arg)
+  "Move point back to indentation of beginning of line.
+
+Move point to the first non-whitespace character on this line.
+If point is already there, move to the beginning of the line.
+Effectively toggle between the first non-whitespace character and
+the beginning of the line.
+
+If ARG is not nil or 1, move forward ARG - 1 lines first.  If
+point reaches the beginning or end of the buffer, stop there."
+  (interactive "^p")
+  (setq arg (or arg 1))
+
+  ;; Move lines first
+  (when (/= arg 1)
+    (let ((line-move-visual nil))
+      (forward-line (1- arg))))
+
+  (let ((orig-point (point)))
+    (back-to-indentation)
+    (when (= orig-point (point))
+      (move-beginning-of-line 1))))
+
+;; remap C-a to `smarter-move-beginning-of-line'
+(global-set-key [remap move-beginning-of-line]
+                'smarter-move-beginning-of-line)
 
 ;; Duplicate start of line or region, from http://www.emacswiki.org/emacs/DuplicateStartOfLineOrRegion
 (defun duplicate-start-of-line-or-region ()

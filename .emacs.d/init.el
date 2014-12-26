@@ -16,6 +16,20 @@
 ;; Use y/n instead of yes/no
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+;; OS Detection
+(defun system-is-mac ()
+  (interactive)
+  (string-equal system-type "darwin"))
+
+(defun system-is-linux ()
+  (interactive)
+  (string-equal system-type "gnu/linux"))
+
+;; Set Command as meta key for OS X
+(if (system-is-mac)
+   (setq ns-command-modifier 'meta))
+
+
 ;; Set hostname
 (setq hostname (replace-regexp-in-string
                 "\\(^[[:space:]\n]*\\|[[:space:]\n]*$\\)" ""
@@ -75,6 +89,7 @@
         pcx-js
         pcx-lisps
         pcx-magit
+        pcx-powerline
         pcx-python
         pcx-theme))
 ;; Now load other things

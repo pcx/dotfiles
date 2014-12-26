@@ -4,9 +4,13 @@
 (ido-mode t)
 (setq ido-enable-prefix nil
       ido-enable-flex-matching t
+      ido-everywhere t
       ido-create-new-buffer 'always
       ido-use-filename-at-point 'guess
       ido-max-prospects 10)
+
+;; mini-buffer compeltions for commands
+(setq icomplete-mode t)
 
 ;; If thing-at-point looks like something openable, default to it
 (setq ido-use-filename-at-point (quote guess))

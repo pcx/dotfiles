@@ -57,39 +57,39 @@
 (package-require 'solarized-theme)
 (load-theme 'solarized-dark t)
 
-(setq default-frame-font-size 11)
-(setq presentation-frame-font-size
-      (truncate (* 1.25 default-frame-font-size)))
+;; (setq default-frame-font-size 12)
+;; (setq presentation-frame-font-size
+;;       (truncate (* 1.25 default-frame-font-size)))
 
-(defun font-desc (name size)
-  (concat name " " (number-to-string size)))
+;; (defun font-desc (name size)
+;;   (concat name " " (number-to-string size)))
 
-;; Set default and presentation mode fonts
-(defun default-frame-font ()
-  (font-desc "Ubuntu" default-frame-font-size))
-(defun presentation-frame-font ()
-  (font-desc "Ubuntu" presentation-frame-font-size))
-(set-frame-font (default-frame-font))
+;; ;; Set default and presentation mode fonts
+;; (defun default-frame-font ()
+;;   (font-desc "Ubuntu" default-frame-font-size))
+;; (defun presentation-frame-font ()
+;;   (font-desc "Ubuntu" presentation-frame-font-size))
+;; (set-frame-font (default-frame-font))
+;; (defun toggle-presentation-mode ()
+;;   (interactive)
+;;   (if (string= (frame-parameter nil 'font) (default-frame-font))
+;;       (progn
+;;         (set-frame-font (presentation-frame-font))
+;;         (theme-light))
+;;     (progn
+;;       (set-frame-font (default-frame-font))
+;;       (theme-dark))))
+;; (global-set-key (kbd "C-<f9>") 'toggle-presentation-mode)
 
-(defun toggle-presentation-mode ()
-  (interactive)
-  (if (string= (frame-parameter nil 'font) (default-frame-font))
-      (progn
-        (set-frame-font (presentation-frame-font))
-        (theme-light))
-    (progn
-      (set-frame-font (default-frame-font))
-      (theme-dark))))
-(global-set-key (kbd "C-<f9>") 'toggle-presentation-mode)
-
-(defun presentation-mode-increase-font-size ()
-  (interactive)
-  (setq presentation-frame-font-size (+ 1 presentation-frame-font-size))
-  (set-frame-font (presentation-frame-font)))
-(defun presentation-mode-decrease-font-size ()
-  (interactive)
-  (setq presentation-frame-font-size (- presentation-frame-font-size 1))
-  (set-frame-font (presentation-frame-font)))
+;; (defun presentation-mode-increase-font-size ()
+;;   (interactive)
+;;   (setq presentation-frame-font-size (+ 1 presentation-frame-font-size))
+;;   (set-frame-font (presentation-frame-font)))
+;; (defun presentation-mode-decrease-font-size ()
+;;   (interactive)
+;;   (setq presentation-frame-font-size (- presentation-frame-font-size 1))
+;;   (set-frame-font (presentation-frame-font)))
+(set-face-attribute 'default nil :height 140)
 (global-set-key (kbd "C-?") 'presentation-mode-increase-font-size)
 (global-set-key (kbd "C-M-?") 'presentation-mode-decrease-font-size)
 

@@ -1,7 +1,7 @@
 alias e='emacsclient -t'
 alias ec='emacsclient -c'
 alias ff='firefox'
-alias ll='ls -lah --group-directories-first'
+alias ll='gls -lahG --group-directories-first'
 alias t='tree -aI .git'
 
 
@@ -20,7 +20,7 @@ source /usr/local/bin/virtualenvwrapper_lazy.sh
 # For autoenv
 source /usr/local/bin/activate.sh
 # git completions
-source /usr/share/bash-completion/completions/git
+source /usr/local/Cellar/git/2.2.0/etc/bash_completion.d/git-completion.bash
 __git_complete g __git_main
 __git_complete b _git_branch
 __git_complete d _git_diff
