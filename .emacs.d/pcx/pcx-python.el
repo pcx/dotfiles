@@ -1,7 +1,7 @@
 ;;; pcx-python.el -- Python configuration
 
-;; (package-require 'pymacs)
-;; (package-require 'pycomplete)
+(package-require 'pymacs)
+(package-require 'pycomplete)
 ;; Require, not autoload, to override Emacs bundled python.el
 (package-require 'python-mode)
 

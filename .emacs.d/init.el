@@ -77,6 +77,7 @@
 
 (setq pcx-pkg-full
       '(pcx-codestyle
+        pcx-python
         pcx-complete
         pcx-defuns
         pcx-dired
@@ -89,8 +90,15 @@
         pcx-js
         pcx-lisps
         pcx-magit
+        pcx-markdown
+        pcx-markup
+        pcx-multimodes
+        pcx-nav
+        pcx-project
+        pcx-session
+        pcx-snippets
+        pcx-terminal
         pcx-powerline
-        pcx-python
         pcx-theme))
 ;; Now load other things
 (dolist (file pcx-pkg-full)
