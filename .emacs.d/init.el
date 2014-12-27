@@ -10,6 +10,18 @@
 (prefer-coding-system 'utf-8)
 (load-library "iso-transl")
 
+(require 'package)
+(dolist (source  '(("melpa" . "http://melpa.org/packages/")
+                   ("marmalade" . "http://marmalade-repo.org/packages/")
+                   ("gnu" . "http://elpa.gnu.org/packages/")))
+  (add-to-list 'package-archives source t))
+(package-initialize)
+
+(defun package-require (pkg)
+  "Install a package only if it's not already installed."
+  (when (not (package-installed-p pkg))
+    (package-install pkg)))
+
 ;; Save buffers automatically before compilation
 (setq compilation-ask-about-save nil)
 
@@ -27,7 +39,11 @@
 
 ;; Set Command as meta key for OS X
 (if (system-is-mac)
-   (setq ns-command-modifier 'meta))
+    (progn
+      (setq ns-command-modifier 'meta)
+      (package-require 'exec-path-from-shell)
+      (exec-path-from-shell-initialize)
+      ))
 
 
 ;; Set hostname
@@ -52,18 +68,6 @@
                                                         (car iface)))))))
             (network-interface-list))
     t))
-
-(require 'package)
-(dolist (source  '(("melpa" . "http://melpa.org/packages/")
-                   ("marmalade" . "http://marmalade-repo.org/packages/")
-                   ("gnu" . "http://elpa.gnu.org/packages/")))
-  (add-to-list 'package-archives source t))
-(package-initialize)
-
-(defun package-require (pkg)
-  "Install a package only if it's not already installed."
-  (when (not (package-installed-p pkg))
-    (package-install pkg)))
 
 ;; Write backup files to own directory
 (setq backup-directory-alist

@@ -20,10 +20,4 @@
      (set-face-background 'flycheck-warning "orange")
      (set-face-foreground 'flycheck-warning "black")))
 
-;;; Haskell specific
-
-(package-require 'flycheck-haskell)
-(eval-after-load 'flycheck
-  '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
-
 (provide 'pcx-flycheck)
