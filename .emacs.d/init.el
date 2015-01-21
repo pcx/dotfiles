@@ -80,7 +80,8 @@
 (Xlaunch (require 'pcx-x11))
 
 (setq pcx-pkg-full
-      '(pcx-codestyle
+      '(pcx-secret
+        pcx-codestyle
         pcx-python
         pcx-complete
         pcx-defuns
@@ -88,6 +89,7 @@
         pcx-editing
         pcx-eshell
         pcx-flycheck
+        pcx-golang
         pcx-haskell
         pcx-helm
         pcx-ido
@@ -103,7 +105,9 @@
         pcx-snippets
         pcx-terminal
         pcx-powerline
-        pcx-theme))
+        pcx-theme
+        pcx-erc ))
+
 ;; Now load other things
 (dolist (file pcx-pkg-full)
   (require file))

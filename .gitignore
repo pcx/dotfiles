@@ -5,3 +5,5 @@
 .emacs.d/session*
 .emacs.d/tramp
 .emacs.d/elpa
+# manually force add this file after removing secrets
+.emacs.d/pcx/pcx-secret.el

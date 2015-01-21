@@ -16,6 +16,10 @@ alias d='git diff'
 alias a='git add'
 alias m='git merge'
 
+alias yt-dl-mp3='youtube-dl --extract-audio --audio-format mp3'
+
+export GOPATH=~/base/golang
+export PATH=$PATH:/usr/local/opt/go/libexec/bin:$GOROOT/bin
 source /usr/local/bin/virtualenvwrapper_lazy.sh
 # For autoenv
 source /usr/local/bin/activate.sh
