@@ -22,4 +22,6 @@
     (erc :server "irc.freenode.net" :port 6667
                 :nick "pcx" :full-name "Phaneendra Chiruvella")))
 
+(package-require 'erc-terminal-notifier)
+(require 'erc-terminal-notifier)
 (provide 'pcx-erc)
