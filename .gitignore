@@ -7,3 +7,4 @@
 .emacs.d/elpa
 # manually force add this file after removing secrets
 .emacs.d/pcx/pcx-secret.el
+.emacs.d/.mc-lists.el

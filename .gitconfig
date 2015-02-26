@@ -24,3 +24,5 @@
 	cl = clone
 	b = branch
 	st = stash
+[push]
+	default = simple
