@@ -6,4 +6,8 @@
 (add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
 
+(defun my-markdown-mode-hook ()
+  (setq tab-width 4 indent-tabs-mode 1)
+  (ethan-wspace-mode 0))
+(add-hook 'markdown-mode-hook 'my-markdown-mode-hook)
 (provide 'pcx-markdown)

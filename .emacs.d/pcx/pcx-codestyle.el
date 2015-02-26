@@ -1,13 +1,10 @@
 ;;; codestyle.el --- Indentation rules for all modes
 
 ;; Tab indentation must die
-(set-default 'indent-tabs-mode nil)
-
-;; Auto indent on new line
-(define-key global-map (kbd "RET") 'newline-and-indent)
+;; (set-default 'indent-tabs-mode nil)
 
 ;; defualt indent level
-(setq-default tab-width 4)
+;; (setq-default tab-width 4)
 ;; JavaScript
 (setq-default js2-basic-offset 2)
 ;; JSON

@@ -32,6 +32,10 @@
   (let ((default-directory (projectile-project-root)))
     (start-process "http.server" "*http.server*"
                    "python3" "-m" "http.server" (number-to-string port))))
+
+;; Install yaml mode
+(package-require 'yaml-mode)
+
 ;; Engage web-mode
 (package-require 'web-mode)
 ;; (setq web-mode-engines-alist

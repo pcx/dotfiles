@@ -7,9 +7,13 @@
 ;; Undo to C-z
 (global-set-key (kbd "C-z") 'undo)
 
+;; Auto indent on new line
+(define-key global-map (kbd "RET") 'newline)
+
+
 ;; Changing C-w functionality to that of 'bash'
 (global-set-key "\C-w" 'backward-kill-word)
-(global-set-key "\C-c\C-k" 'kill-region)
+(global-set-key "\C-x\C-k" 'kill-region)
 
 ;; re-map kill-whole-line
 (global-set-key (kbd "M-k") 'kill-whole-line)
