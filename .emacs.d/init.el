@@ -102,6 +102,7 @@
         pcx-nav
         pcx-project
         pcx-session
+        pcx-shell
         pcx-snippets
         pcx-terminal
         pcx-powerline

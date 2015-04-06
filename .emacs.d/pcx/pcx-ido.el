@@ -8,6 +8,7 @@
       ido-create-new-buffer 'always
       ido-use-filename-at-point 'guess
       ido-max-prospects 10)
+(ido-ubiquitous-mode t)
 
 ;; mini-buffer compeltions for commands
 (setq icomplete-mode t)
