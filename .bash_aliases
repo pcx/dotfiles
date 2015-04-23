@@ -82,3 +82,4 @@ pathadd() {
         PATH="${PATH:+"$PATH:"}$1"
     fi
 }
+alias boot2docker-start="boot2docker start && boot2docker shellinit && export DOCKER_HOST=tcp://boot2docker:2376 && export DOCKER_CERT_PATH=/Users/pcx/.boot2docker/certs/boot2docker-vm && export DOCKER_TLS_VERIFY=1"
