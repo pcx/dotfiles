@@ -1,6 +1,7 @@
 ;;; ido.el -- ido mode setup
 
-;; Enable
+;; (package-require 'flx-ido)
+
 (ido-mode t)
 (setq ido-enable-prefix nil
       ido-enable-flex-matching t
@@ -8,6 +9,8 @@
       ido-create-new-buffer 'always
       ido-use-filename-at-point 'guess
       ido-max-prospects 10)
+;; (flx-ido-mode t)
+;; (setq ido-use-faces nil)
 (ido-ubiquitous-mode t)
 
 ;; mini-buffer compeltions for commands

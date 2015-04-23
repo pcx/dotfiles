@@ -13,6 +13,8 @@
 
 (eval-after-load "flycheck"
   '(progn
+     (flycheck-add-mode 'python-flake8 'django-mode)
+     (flycheck-add-mode 'python-pylint 'django-mode)
      (setq flycheck-highlighting-mode nil)
      (add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode)
      (set-face-background 'flycheck-error "red")

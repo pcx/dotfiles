@@ -1,8 +1,8 @@
 ;;; editing.el -- Miscellaneous editing features
 
-(setq delete-selection-mode t)
-
-(setq show-paren-mode t)
+(setq delete-selection-mode t
+      show-paren-mode t
+      electric-pair-mode t)
 
 ;; Undo to C-z
 (global-set-key (kbd "C-z") 'undo)

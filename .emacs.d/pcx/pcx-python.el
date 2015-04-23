@@ -17,7 +17,7 @@
 ;; (add-hook 'jedi-mode-hook 'jedi-direx:setup)
 
 ;; Use flake8 for flymake stuff
-(setq flymake-python-pyflakes-executable "flake8")
+(setq flymake-python-pyflakes-executable "/usr/local/bin/flake8")
 
 ;; Pytest bindings
 (package-require 'pytest)

@@ -81,6 +81,7 @@
 
 (setq pcx-pkg-full
       '(pcx-secret
+        pcx-theme
         pcx-codestyle
         pcx-python
         pcx-complete
@@ -90,7 +91,7 @@
         pcx-eshell
         pcx-flycheck
         pcx-golang
-        pcx-haskell
+        ;; pcx-haskell
         pcx-helm
         pcx-ido
         pcx-js
