@@ -1,9 +1,5 @@
 ;;; editing.el -- Miscellaneous editing features
 
-(setq delete-selection-mode t
-      show-paren-mode t
-      electric-pair-mode t)
-
 ;; Undo to C-z
 (global-set-key (kbd "C-z") 'undo)
 
@@ -80,6 +76,10 @@
 (global-set-key (kbd "C-c r") 'vr/replace)
 (global-set-key (kbd "C-c q") 'vr/query-replace)
 (global-set-key (kbd "C-c m") 'vr/mc-mark)
+
+(setq delete-selection-mode t)
+(setq show-paren-mode t)
+(setq electric-pair-mode t)
 
 ;; visual-line-mode wrap column
 (defvar visual-wrap-column nil)

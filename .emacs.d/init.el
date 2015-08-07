@@ -56,6 +56,7 @@
 (setq dotfiles-dir (file-name-directory
                     (or (buffer-file-name) load-file-name)))
 (add-to-list 'load-path (concat dotfiles-dir "pcx"))
+(add-to-list 'load-path (concat dotfiles-dir "pcx" "/vendor"))
 
 ;; Check network connectivity, from ESK
 ;; Detect online status, from ESK
@@ -107,7 +108,7 @@
         pcx-snippets
         pcx-terminal
         pcx-powerline
-        pcx-theme
+        pcx-misc
         pcx-erc ))
 
 ;; Now load other things

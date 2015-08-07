@@ -9,6 +9,11 @@
 (eval-after-load "ace-jump-mode"
   '(ace-jump-mode-enable-mark-sync))
 
+(add-hook 'prog-mode-hook #'hs-minor-mode)
+(global-set-key (kbd "C-c s") 'hs-show-block)
+(global-set-key (kbd "C-c h") 'hs-hide-block)
+
+
 ;; Smart home key
 (defun smart-beginning-of-line ()
   "Move point to first non-whitespace character or beginning-of-line."

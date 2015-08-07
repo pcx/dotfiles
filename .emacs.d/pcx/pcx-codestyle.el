@@ -2,13 +2,8 @@
 
 ;; Tab indentation must die
 ;; (set-default 'indent-tabs-mode nil)
-
-;; defualt indent level
 ;; (setq-default tab-width 4)
-;; JavaScript
-(setq-default js2-basic-offset 2)
-;; JSON
-(setq-default js-indent-level 2)
+
 ;; XML
 (setq-default nxml-child-indent 2)
 

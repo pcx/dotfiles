@@ -2,12 +2,12 @@ alias e='emacsclient -t'
 alias ec='emacsclient -c'
 alias ff='firefox'
 alias ll='ls -lahG'
-alias t='tree -aI .git'
+alias t='tree -aI ".git|__pycache__|*.pyc"'
 
 
 alias py='python3'
 alias ipy='ipython'
-alias pys='python -m SimpleHTTPServer'
+alias pys='python3 -m http.server'
 
 alias g='git'
 alias s='git status'
@@ -18,8 +18,7 @@ alias m='git merge'
 
 alias yt-dl-mp3='youtube-dl --extract-audio --audio-format mp3'
 
-export GOPATH=~/base/golang
-export PATH=$PATH:/usr/local/opt/go/libexec/bin:$GOROOT/bin
+VIRTUALENVWRAPPER_PYTHON='/usr/local/bin/python3'
 source /usr/local/bin/virtualenvwrapper_lazy.sh
 # For autoenv
 source /usr/local/bin/activate.sh
@@ -82,4 +81,8 @@ pathadd() {
         PATH="${PATH:+"$PATH:"}$1"
     fi
 }
-alias boot2docker-start="boot2docker start && boot2docker shellinit && export DOCKER_HOST=tcp://boot2docker:2376 && export DOCKER_CERT_PATH=/Users/pcx/.boot2docker/certs/boot2docker-vm && export DOCKER_TLS_VERIFY=1"
+
+export GOPATH=~/base/golang
+pathadd $GOPATH/bin
+alias boot2docker-config="boot2docker shellinit && export DOCKER_HOST=tcp://boot2docker:2376 && export DOCKER_CERT_PATH=/Users/pcx/.boot2docker/certs/boot2docker-vm && export DOCKER_TLS_VERIFY=1"
+alias compose="docker-compose"

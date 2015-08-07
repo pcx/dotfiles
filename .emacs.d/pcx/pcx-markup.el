@@ -48,9 +48,9 @@
 (add-hook
  'web-mode-hook
  (lambda ()
-   (setq web-mode-indent-style 4) ;; Indent content of HTML tags
-   (setq web-mode-markup-indent-offset 4)
-   (setq web-mode-css-indent-offset 4)
-   (setq web-mode-code-indent-offset 4)))
+   (setq web-mode-indent-style 2)
+   (setq web-mode-markup-indent-offset 2)
+   (setq web-mode-css-indent-offset 2)
+   (setq web-mode-code-indent-offset 2)))
 
 (provide 'pcx-markup)
