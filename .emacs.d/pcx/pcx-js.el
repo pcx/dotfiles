@@ -8,12 +8,8 @@
 ;; JSON
 (setq-default js-indent-level 2)
 
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+;; (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
-
-;; Alternative js2-mode extensions
-(add-to-list 'auto-mode-alist '("\\.es6\\'" . js2-mode))
-(add-to-list 'auto-mode-alist '("\\.ejs\\'" . js2-mode))
 
 (setq-default js2-mode-indent-ignore-first-tab t)
 (setq-default js2-show-parse-errors nil)

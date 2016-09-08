@@ -46,49 +46,11 @@
 (global-git-gutter-mode t)
 ;; (setq git-gutter-fr:side 'right-fringe)
 
-;; ;; Set custom theme path
-;; (setq custom-theme-directory (concat dotfiles-dir "themes"))
-;; (dolist
-;;     (path (directory-files custom-theme-directory t "\\w+"))
-;;   (when (file-directory-p path)
-;;     (add-to-list 'custom-theme-load-path path)))
 
 ;; Install themes
 (package-require 'solarized-theme)
 (load-theme 'solarized-dark t)
 
-;; (setq default-frame-font-size 12)
-;; (setq presentation-frame-font-size
-;;       (truncate (* 1.25 default-frame-font-size)))
-
-;; (defun font-desc (name size)
-;;   (concat name " " (number-to-string size)))
-
-;; ;; Set default and presentation mode fonts
-;; (defun default-frame-font ()
-;;   (font-desc "Ubuntu" default-frame-font-size))
-;; (defun presentation-frame-font ()
-;;   (font-desc "Ubuntu" presentation-frame-font-size))
-;; (set-frame-font (default-frame-font))
-;; (defun toggle-presentation-mode ()
-;;   (interactive)
-;;   (if (string= (frame-parameter nil 'font) (default-frame-font))
-;;       (progn
-;;         (set-frame-font (presentation-frame-font))
-;;         (theme-light))
-;;     (progn
-;;       (set-frame-font (default-frame-font))
-;;       (theme-dark))))
-;; (global-set-key (kbd "C-<f9>") 'toggle-presentation-mode)
-
-;; (defun presentation-mode-increase-font-size ()
-;;   (interactive)
-;;   (setq presentation-frame-font-size (+ 1 presentation-frame-font-size))
-;;   (set-frame-font (presentation-frame-font)))
-;; (defun presentation-mode-decrease-font-size ()
-;;   (interactive)
-;;   (setq presentation-frame-font-size (- presentation-frame-font-size 1))
-;;   (set-frame-font (presentation-frame-font)))
 (set-face-attribute 'default nil :height 140)
 (global-set-key (kbd "C-?") 'presentation-mode-increase-font-size)
 (global-set-key (kbd "C-M-?") 'presentation-mode-decrease-font-size)
@@ -115,7 +77,6 @@
 (eval-after-load "cider" '(diminish 'cider-mode))
 (eval-after-load "smartparens" '(diminish 'smartparens-mode))
 (eval-after-load "git-gutter" '(diminish 'git-gutter-mode))
-(eval-after-load "magit" '(diminish 'magit-auto-revert-mode))
 
 (eval-after-load "js2-mode"
   '(defadvice js2-mode (after js2-rename-modeline activate)

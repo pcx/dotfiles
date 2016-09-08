@@ -14,6 +14,9 @@
 ;; re-map kill-whole-line
 (global-set-key (kbd "M-k") 'kill-whole-line)
 
+;; Dictionary check, needs ispell to be installed
+(flyspell-mode t)
+
 ;; Multiple cursors!
 (package-require 'multiple-cursors)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)

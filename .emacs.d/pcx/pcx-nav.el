@@ -32,28 +32,21 @@
 (package-require 'anzu)
 (global-anzu-mode 1)
 
-;; ;; Project Explorer
-;; (package-require 'helm)
-;; (package-require 'project-explorer)
-;; (require 'project-explorer)
-;; (setq-default pe/width 28)
+;; Better search using The Silver Searcher
+(package-require 'ag)
 
-;; ;; Touch tree to open
-;; (define-key project-explorer-mode-map (kbd "<mouse-1>") 'pe/return)
+;; Project Explorer
+(package-require 'helm)
+(package-require 'project-explorer)
+(require 'project-explorer)
+(setq-default pe/width 28)
 
-;; ;; Open project explorer with swipe from left margin
-;; (global-set-key
-;;  (kbd "<left-margin> <drag-mouse-1>")
-;;  (lambda () (interactive)
-;;    (-if-let (win (car (-keep 'get-buffer-window (pe/get-project-explorer-buffers))))
-;;        (delete-window win)
-;;      (project-explorer-open))))
-
-;; ;; Highlight current tree item
-;; (add-hook 'project-explorer-mode-hook 'hl-line-mode)
+;; Highlight current tree item
+(add-hook 'project-explorer-mode-hook 'hl-line-mode)
 
 
-;; ;; Help for major modes
-;; (package-require 'discover-my-major)
-;; (global-set-key (kbd "C-h C-m") 'discover-my-major)
+;; Help for major modes
+(package-require 'discover-my-major)
+(global-set-key (kbd "C-h C-m") 'discover-my-major)
+
 (provide 'pcx-nav)

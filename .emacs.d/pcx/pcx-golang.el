@@ -1,4 +1,4 @@
-;;; pcx-python.el -- Python configuration
+;;; pcx-golang.el -- Golang configuration
 (setq pcx-go-path "/Users/pcx/base/golang")
 (setenv "GOPATH" pcx-go-path)
 (setq godef-command "/Users/pcx/base/golang/bin/godef")

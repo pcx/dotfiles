@@ -4,6 +4,9 @@
 *.elc
 .emacs.d/session*
 .emacs.d/tramp
+.emacs.d/projectile.cache
+.emacs.d/ensime
+.emacs.d/.python-environments
 .emacs.d/elpa
 # manually force add this file after removing secrets
 .emacs.d/pcx/pcx-secret.el

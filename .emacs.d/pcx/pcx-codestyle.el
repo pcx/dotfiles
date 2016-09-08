@@ -1,4 +1,4 @@
-;;; codestyle.el --- Indentation rules for all modes
+;;; pcx-codestyle.el --- Indentation rules for all modes
 
 ;; Tab indentation must die
 ;; (set-default 'indent-tabs-mode nil)

@@ -21,13 +21,10 @@
      (flycheck-add-mode 'python-flake8 'django-mode)
      (flycheck-add-mode 'python-pylint 'django-mode)
      (flycheck-add-mode 'javascript-eslint 'js2-mode)
+     (flycheck-add-mode 'javascript-eslint 'web-mode)
      (set-face-background 'flycheck-error "red")
      (set-face-foreground 'flycheck-error "black")
      (set-face-background 'flycheck-warning "orange")
      (set-face-foreground 'flycheck-warning "black")))
-
-;; disable jshint since we prefer eslint checking
-(setq-default flycheck-disabled-checkers
-              '(javascript-jshint json-jsonlist))
 
 (provide 'pcx-flycheck)

@@ -8,6 +8,8 @@
      insteadOf = gh
 [url "git@bitbucket.org"]
      insteadOf = bb
+[url "git@gitlab.com"]
+     insteadOf = gl
 [help]
 	autocorrect = 1
 [alias]

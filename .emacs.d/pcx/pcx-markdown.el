@@ -8,6 +8,7 @@
 
 (defun my-markdown-mode-hook ()
   (setq tab-width 4 indent-tabs-mode 1)
-  (ethan-wspace-mode 0))
+  (ethan-wspace-mode 0)
+  (visual-line-mode 1))
 (add-hook 'markdown-mode-hook 'my-markdown-mode-hook)
 (provide 'pcx-markdown)

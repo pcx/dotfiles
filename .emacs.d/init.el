@@ -1,4 +1,4 @@
-;;; init.el --- pcx.io
+;;; init.el --- github.com/pcx
 
 ;; Disable annoying menu-bar, tool-bar and scroll-bar
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
@@ -73,6 +73,18 @@
 ;; Write backup files to own directory
 (setq backup-directory-alist
       `(("." . ,(expand-file-name (concat dotfiles-dir "bak")))))
+(setq backup-by-copying t)
+(setq delete-old-versions t
+  kept-new-versions 6
+  kept-old-versions 2
+  version-control t)
+
+;; Don't create lockfiles
+(setq create-lockfiles nil)
+
+;; Write all auto-save files to own directory
+(setq auto-save-file-name-transforms
+      `((".*" ,(expand-file-name (concat dotfiles-dir "tmp") t))))
 
 ;; Macro for X specific code
 (defmacro Xlaunch (&rest x)
@@ -85,6 +97,7 @@
         pcx-theme
         pcx-codestyle
         pcx-python
+        pcx-ruby
         pcx-complete
         pcx-defuns
         pcx-dired
@@ -103,6 +116,7 @@
         pcx-multimodes
         pcx-nav
         pcx-project
+        pcx-scala
         pcx-session
         pcx-shell
         pcx-snippets
