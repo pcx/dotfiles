@@ -51,9 +51,6 @@
       (let ((web-mode-enable-part-face nil))
         ad-do-it)
     ad-do-it))
-
-  (lambda ()
-)
 (add-hook
  'web-mode-hook
  (lambda ()

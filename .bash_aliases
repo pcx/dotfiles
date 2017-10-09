@@ -1,7 +1,3 @@
-alias e='emacsclient -t'
-alias ec='emacsclient -c'
-alias ff='firefox'
-alias ll='ls -lahG'
 alias t='tree -aI ".git|__pycache__|*.pyc"'
 
 
