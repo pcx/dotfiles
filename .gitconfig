@@ -1,3 +1,4 @@
+
 [user]
 	name = Phaneendra Chiruvella
 [core]
@@ -10,6 +11,8 @@
      insteadOf = bb
 [url "git@gitlab.com"]
      insteadOf = gl
+[url "git@github.com:dunzoit"]
+     insteadOf = https://github.com/dunzoit
 [help]
 	autocorrect = 1
 [alias]
@@ -28,3 +31,5 @@
 	st = stash
 [push]
 	default = simple
+[init]
+	defaultBranch = main
