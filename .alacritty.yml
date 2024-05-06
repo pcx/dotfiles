@@ -1,29 +1,32 @@
-font:
-  normal:
-    family: Source Code Pro
-    style: Regular
-  bold:
-    family: Source Code Pro
-    style: Bold
+[font]
+size = 24
 
-  italic:
-    family: Source Code Pro
-    style: Italic
+[font.bold]
+family = "Source Code Pro"
+style = "Bold"
 
-  bold_italic:
-    family: Source Code Pro
-    style: Bold Italic
+[font.bold_italic]
+family = "Source Code Pro"
+style = "Bold Italic"
 
-  size: 24
+[font.italic]
+family = "Source Code Pro"
+style = "Italic"
 
-shell:
-  program: /usr/local/bin/tmux
-  args:
-    - new-session
-    - -A
-    - -s
-    - main
-key_bindings:
-  - { key: F, mods: Alt, chars: "\x1BF" }
-  - { key: B, mods: Alt, chars: "\x1BB" }
+[font.normal]
+family = "Source Code Pro"
+style = "Regular"
 
+[[keyboard.bindings]]
+chars = "\u001BF"
+key = "F"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001BB"
+key = "G"
+mods = "Alt"
+
+[shell]
+args = ["new-session", "-A", "-s", "main"]
+program = "/opt/homebrew/bin/tmux"
